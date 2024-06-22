@@ -6,14 +6,16 @@ MAIN_CLASS = MainSemaphores
 
 # Default target
 all: $(CLASS_FILES)
-
+        @echo "Done compiling."
 # Rule to compile all .java files to .class files
 $(CLASS_FILES): $(SRC_FILES)
-        javac $(SRC_FILES)
+        @javac $(SRC_FILES)
 
 # Run the main class
 run: all
-        java $(MAIN_CLASS)
+        @echo "Program runing...."
+        @java $(MAIN_CLASS)
+        @echo "Program finished."
 
 # Clean up .class files
 clean:
